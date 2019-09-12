@@ -1,0 +1,63 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	font-weight: normal
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+b, strong
+	font-weight: 600
+
+ul,ol,li
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+li
+	margin-bottom: 1rem
+
+section
+	padding: 6.5vmax 0
+	position: relative
+	h2
+		text-transform: uppercase
+		font-size: 30px
+		position: relative
+		font-weight: bold
+		padding-bottom: 20px
+		line-height: 1.2
+		margin-bottom: 50px
+		text-align: center
+
+
+
+
+@import "media" // Always at the end
