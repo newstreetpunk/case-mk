@@ -25,14 +25,18 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
-
+a
+	color: $accent
+	font-weight: 600
+	text-decoration: underline
+	transition: all .2s ease
+	&:hover
+		text-decoration: none
+		color: $accent
 img
 	display: block
 	max-width: 100%
 	height: auto
-	&.img-width
-		width: 100%
-
 b, strong
 	font-weight: 600
 
@@ -52,24 +56,49 @@ li
 	clip: rect(0 0 0 0)
 
 section
-	padding: 6.5vmax 0
+	padding: 5vmax 0
 	position: relative
 	h2
 		text-transform: uppercase
-		font-size: 30px
+		font-size: 25px
 		position: relative
 		font-weight: bold
-		padding-bottom: 20px
 		line-height: 1.2
 		margin-bottom: 50px
 		text-align: center
+		position: relative
+		z-index: 1
+		&:after
+			content: ''
+			display: block
+			width: 100px
+			height: 100px
+			background-image: url(../img/title-bg__gray.png)
+			background-position: center
+			background-size: cover
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: -1
+.gray-bg
+	background-color: $gray
+	h2:after
+		background-image: url(../img/title-bg__white.png)
 
-.sect-title
-	text-transform: uppercase
-	font-size: 25px
-	font-weight: bold
+.sect
+	&-title
+		text-transform: uppercase
+		font-size: 25px
+		font-weight: bold
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
 .ac-c
-	color: $accent		
+	color: $accent
+.semi-bold
+	font-weight: 600	
 .header
 	background-color: #dfdfdf
 	position: relative
@@ -91,6 +120,144 @@ section
 			margin-bottom: 10px
 		span
 			display: block	
+
+
+.problems
+	h2
+		text-align: left
+		margin-bottom: 20px
+	img
+		width: 50%
+		margin-left: -5%
+	&__text
+		width: 50%
+.decision
+	&__text
+		width: 51%
+	img
+		width: 45%
+.structure
+	h3
+		text-align: center
+		line-height: 1.4
+		margin: 50px auto 40px
+		max-width: 680px
+		width: 100%
+	&__items
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin-bottom: 50px
+		&-item
+			padding: 20px 45px
+			border: 5px solid $accent
+			margin: 0 5%
+			margin-bottom: 35px
+			box-shadow: -4px 0 50px rgba(#000, .15)
+			font-weight: 600
+			color: $accent
+			&:first-child
+				margin-left: 0
+			&:nth-child(3)
+				margin-right: 0
+	&__img
+		width: 30%
+		img
+			filter: drop-shadow(5px 5px 30px rgba(#000, .15))
+	&__text
+		width: 65%
+	.sect__row--cr
+		margin-top: 80px
+		h4
+			font-size: 18px
+			margin-bottom: 30px
+		ul
+			margin-bottom: 30px
+			li
+				margin-bottom: 5px
+		img
+			margin: 0 60px
+
+.design
+	p
+		text-align: center
+		width: 90%
+		margin: 0 auto
+	&__item
+		width: 50%
+		padding: 0 40px
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 30px
+		margin-bottom: 50px
+		.accent-block
+			background-color: $accent
+			color: #fff
+			font-weight: 600
+			width: 110px
+			height: 110px
+			text-align: center
+			line-height: 110px
+			box-shadow: 0px 19px 38px 0px rgba( 0, 0, 0, .35 )
+		img
+			width: 70%
+			height: auto
+			margin: 27px 0
+		p
+			text-align: center
+			margin-top: 30px
+			width: 100%
+.design__descr
+	padding-top: 0
+	.title-wrap
+		text-align: center
+		margin: 5vmax 0 4vmax
+	.sect-title
+		line-height: 1.2
+		padding: 20px 50px
+		background-color: $accent
+		color: #fff
+	.subtitle
+		font-size: 18px
+		font-weight: 600
+		text-align: center
+		display: block
+		margin-bottom: 40px
+	.img-wrap
+		box-shadow: 0 15px 70px rgba(#000, .33)
+		margin-bottom: 50px
+	ol
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		li
+			width: 48%
+			> span
+				background-image: linear-gradient(#e65c00 0, #f9d423 100%)
+				position: relative
+				border-radius: 30px
+				z-index: 1
+				position: relative
+				padding: 15px 30px
+				font-weight: 600
+				display: block
+				max-width: 100%
+				&:after
+					content: ''
+					display: block
+					border-radius: inherit
+					position: absolute
+					left: 0
+					top: 0
+					right: 0
+					bottom: 0
+					background-color: #fff
+					margin: 2px
+					z-index: -1
+				> span
+					color: #e65c00
+
 
 
 .all-cases 

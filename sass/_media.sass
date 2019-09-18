@@ -5,6 +5,15 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.structure__items-item
+		margin: 0 1% 25px
+	.structure .sect__row--cr img
+		margin: 0 30px
+		width: 20%
+	.design__item
+		padding: 0 20px
+	.design__item img
+		margin: 19px 0
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -12,9 +21,38 @@
 		font-size: 16px
 		.sect-title
 			font-size: 18px
+	.problems
+		&__text
+			width: 100%
+		.sect__row
+			flex-direction: column-reverse
+		img
+			width: 80%
+			margin-left: 0
+			margin-top: 5%
+	.structure__items
+		flex-direction: column
+		align-items: center
+	.structure__items-item
+		text-align: center
+	.design
+		.sect__row
+			flex-direction: column
+	.design__item
+		width: 75%
+		margin-top: 0
+		&:first-child
+			margin-top: 30px
+	.design p
+		width: 100%
+		text-align: left
+	.design__item p
+		text-align: center
 
 // ≥768px
 +media-breakpoint-down(sm)
+	section
+		padding: 10vmax 0
 	.header
 		overflow-x: hidden
 		.sect-title
@@ -32,6 +70,8 @@
 			right: -18%
 			margin: 0 auto
 			margin-top: -70px
+	.problems img
+		width: 100%
 	.all-cases 
 		width: 100%
 		top: -100px
@@ -39,15 +79,54 @@
 		&.active
 			top: 0
 			right: 0
+	.decision
+		&__text, img
+			width: 100%
+		img
+			margin-bottom: 5%
+		.sect__row
+			flex-direction: column-reverse
+	.structure
+		.sect__row
+			flex-direction: column
+		&__text
+			width: 100%
+			margin-top: 40px
+	.structure__img
+		display: none
+	.structure .sect__row--cr
+		flex-direction: column-reverse
+		margin-top: 0
+	.structure__text
+		margin-top: 0
+	.structure .sect__row--cr img
+		width: 50%
+		margin: 30px 0
+	.structure__items
+		margin-bottom: 20px
+	.design__item
+		width: 100%
+		margin-bottom: 30px
+	.design__item img
+		margin-bottom: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
+	section
+		padding: 50px 0
 	.header-wrap
 		padding-top: 10%
 		br
 			display: none
 	.header img
 		margin-top: 0
+	.structure__items-item
+		width: 100%
+		padding: 20px
+	.structure .sect__row--cr img
+		width: 80%
+	.design__item p b
+		font-weight: 600
 
 
 /*==========  Mobile First  ==========*/
