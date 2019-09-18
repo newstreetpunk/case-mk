@@ -212,6 +212,8 @@ section
 	padding-top: 0
 	&-block
 		margin-bottom: 80px
+		&:last-child
+			margin-bottom: 0
 	.title-wrap
 		text-align: center
 		margin: 5vmax 0 4vmax
@@ -275,7 +277,21 @@ section
 			text-align: center
 			&:last-child
 				max-width: 75%
-
+.sect__row--col
+	.mob-img
+		display: none
+	&:first-child
+		width: 60%
+	.img-wrap
+		margin-bottom: 0
+.total
+	padding-bottom: 0
+	&__text
+		width: 70%
+		a
+			color: #f04928
+	a.sa-logo
+		width: 30%
 
 
 .all-cases 

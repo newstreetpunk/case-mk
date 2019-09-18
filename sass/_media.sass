@@ -14,6 +14,10 @@
 		padding: 0 20px
 	.design__item img
 		margin: 19px 0
+	.total__text
+		width: 80%
+	.total a.sa-logo
+		width: 20%
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -56,6 +60,15 @@
 		width: 100%
 		margin-right: 0 !important
 		margin-left: 0 !important
+	.sect__row--col
+		.img-wrap
+			display: none
+	.sect__row--col:first-child
+		width: 100%
+	.sect__row--col .mob-img
+		display: block
+		max-width: 320px
+		margin: 50px auto
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -125,6 +138,19 @@
 		text-align: left
 	.design__descr-block
 		margin-bottom: 40px
+	.design__descr .sect-title
+		display: block
+		padding: 20px
+	.sect__row--col p
+		padding: 0 15px
+	.total
+		padding-top: 0
+		.sect__row
+			flex-direction: column-reverse
+	.total__text
+		width: 100%
+	.total a.sa-logo
+		width: 75%
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -139,6 +165,8 @@
 	.structure__items-item
 		width: 100%
 		padding: 20px
+		margin-left: 0 !important
+		margin-right: 0 !important
 	.structure .sect__row--cr img
 		width: 80%
 	.design__item p b
@@ -153,9 +181,8 @@
 		border-radius: 0
 		&:after
 			margin: 2px 0
-	.design__descr .sect-title
-		display: block
-		padding: 20px
+	.total a.sa-logo
+		width: 90%
 
 
 /*==========  Mobile First  ==========*/
